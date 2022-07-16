@@ -23,7 +23,7 @@ const WeatherList = (props) => {
 
 
   function test(){
-    axios.get('http://api.openweathermap.org/geo/1.0/direct?q={London},{ON},{CA}&limit=&appid=b4e7ed643827bbd56ddb52aa6ebf541f')
+    axios.get('http://api.openweathermap.org/geo/1.0/direct?q={London},{ON},{CA}&limit=&appid=')
     .then(res => {
       const data = res.data;
       //work on setting up latituide and l;ogitude
