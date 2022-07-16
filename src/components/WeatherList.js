@@ -18,8 +18,7 @@ const WeatherList = (props) => {
 //   const latitude;
 //   const 
 
-  const url1 = "http://api.openweathermap.org/geo/1.0/direct?q="
-  const url2 = "&limit=&appid=b4e7ed643827bbd56ddb52aa6ebf541f"
+
 
 
 
