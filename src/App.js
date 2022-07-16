@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+import React, {useState, useEffect, useMemo}  from 'react'
+import Weather from './components/Weather'
+import WeatherList from './components/WeatherList'
+
+const App = () => {
+
+  const[country, setCountry] = useState([])
+  const[city, setCity] = useState([])
+  const[state, setState] = useState([])
+
+  // const 
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Weather 
+       country= {country}
+       city = {city}
+       state = {state}
+       setCountry = {setCountry}
+       setCity = {setCity}
+       setState = {setState}
+       />
+
+       <WeatherList 
+       country = {country}
+       state = {state}
+       city = {city}
+
+       
+       />
+       
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
