@@ -9,6 +9,9 @@ import React from 'react'
 const Weather = (props) => {
   // console.log(props.country)
 
+  const isTrue = props.isOn
+  const setIsTrue = props.setIsOn
+
 
 
 
@@ -39,6 +42,12 @@ const Weather = (props) => {
     props.setCity([newCity])
   }
 
+  //button stuff
+
+  function handleButton(){
+    setIsTrue(isTrue => !isTrue)
+  }
+
   
 
 
@@ -51,7 +60,7 @@ const Weather = (props) => {
 
       <div>
         <form onSubmit={handleSub}>
-          <button type = 'submit'>Add</button>
+          <button type = 'submit' onClick={handleButton} value = {isTrue}>Add</button>
           <input type = 'text'  onChange ={handleCountryChange} value = {props.country} placeholder = 'Enter a city...'></input>
           <input type = 'text' onChange ={handleCityChange} value = {props.city} placeholder = 'Enter a city...'></input>
           <input type = 'text' onChange ={handleStateChange} value = {props.state} placeholder = 'Enter a city...'></input>
