@@ -1,9 +1,22 @@
 
 import React from 'react'
 
-const Content = () => {
+
+
+const Content = (props) => {
+
+  const weather = props.weather
+
   return (
-    <div>Content</div>
+    <div>
+
+
+
+
+    // get picture api 
+
+
+    </div>
   )
 }
 

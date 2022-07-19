@@ -3,6 +3,7 @@
 import React, {useState, useEffect, useMemo}  from 'react'
 import Weather from './components/Weather'
 import WeatherList from './components/WeatherList'
+import Content from './components/Content'
 
 const App = () => {
 
@@ -40,6 +41,13 @@ const App = () => {
        setWeather = {setWeather}
        
 
+       />
+
+       <Content 
+
+       weather = {weather}
+       
+       
        />
        
 
