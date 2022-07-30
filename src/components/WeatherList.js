@@ -2,6 +2,7 @@
 
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import '../static/main.css'
 
 
 
@@ -11,9 +12,12 @@ import axios from 'axios'
 
 const WeatherList = (props) => {
 
+
+
     const[latitude, setLatitude] = useState([])
     const[longitude, setLongitude] = useState([])
     const[description , setDescription] = useState([])
+
 
 
 
@@ -21,7 +25,6 @@ const WeatherList = (props) => {
 
     const weather = props.weather
     const setWeather = props.setWeather
-    // console.log(weather)
 
 
 
@@ -58,9 +61,8 @@ const WeatherList = (props) => {
     useEffect(() =>{
 
         if(clicked == true){
-            // for(let i = 0; i < 1; i++){
 
-                axios.get('http://api.openweathermap.org/geo/1.0/direct?q={London},{ON},{CA}&limit=&appid=d845f68063b14f8ed4800c279bc2a518')
+                axios.get(`${url1}${city},${state},${country}${url2}${key}`)
                 .then(res => {
                 const data = res.data;
                 // console.log(data)
@@ -86,7 +88,7 @@ const WeatherList = (props) => {
 
 
 
-    //Runs if latitude changes
+    // Runs if latitude changes
 
     useEffect(() => {
 
@@ -131,16 +133,12 @@ const WeatherList = (props) => {
 
 
   return (
-    <div>
+    <div >
 
-
-
-        {latitude}
-        {longitude}
+        <div className = "idk">
         {description}
-        {weather}
 
-        {/* {clicked == true ? } */}
+        </div>
 
 
     </div>

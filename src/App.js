@@ -4,6 +4,8 @@ import React, {useState, useEffect, useMemo}  from 'react'
 import Weather from './components/Weather'
 import WeatherList from './components/WeatherList'
 import Content from './components/Content'
+// import './static/index.css'
+import './test.css'
 
 const App = () => {
 
@@ -20,8 +22,10 @@ const App = () => {
 
 
   return (
-    <div>
-       <Weather 
+    <div className='App'>
+      <div className='main'>
+
+      <Weather 
        country= {country}
        city = {city}
        state = {state}
@@ -43,12 +47,17 @@ const App = () => {
 
        />
 
-       <Content 
+      </div>
+      <div className='bg1'>
+      <Content 
+       
 
        weather = {weather}
        
        
        />
+
+      </div>
        
 
     </div>
