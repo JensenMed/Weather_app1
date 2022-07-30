@@ -46,7 +46,7 @@ const WeatherList = (props) => {
 
     const url1 = "http://api.openweathermap.org/geo/1.0/direct?q="
     const url2 = "&limit=&appid="
-    const key = 'd845f68063b14f8ed4800c279bc2a518'
+    const key = //add your own key here
 
 
     //api 2 weather data
